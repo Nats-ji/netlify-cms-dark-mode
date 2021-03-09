@@ -123,7 +123,8 @@
   [class*="AddButton-button"],
   [class*="FileWidgetButton-button"],
   [class*="SaveButton-lightBlue"],
-  [class*="StatusButton"]
+  [class*="StatusButton"],
+  [class*="StyledDropdownButton"]
   {
     color: var(--primary-text-color);
     background-color: var(--btn-gray-default-bg);
@@ -141,7 +142,8 @@
   [class*="AddButton-button"]:hover,
   [class*="FileWidgetButton-button"]:hover,
   [class*="SaveButton-lightBlue"]:hover,
-  [class*="StatusButton"]:hover
+  [class*="StatusButton"]:hover,
+  [class*="StyledDropdownButton"]:hover
   {
     background-color: var(--btn-gray-hover-bg);
     border-color: var(--btn-gray-hover-border);
@@ -155,7 +157,8 @@
   [class*="AddButton-button"]:focus,
   [class*="FileWidgetButton-button"]:focus,
   [class*="SaveButton-lightBlue"]:focus,
-  [class*="StatusButton"]:focus
+  [class*="StatusButton"]:focus,
+  [class*="StyledDropdownButton"]:focus
   {
     color: var(--primary-text-color);
     background-color: var(--btn-gray-focus-bg);
@@ -171,7 +174,8 @@
 
   /* red button */
   [class*="utton-lightRed"],
-  [class*="FileWidgetButtonRemove-button"]
+  [class*="FileWidgetButtonRemove-button"],
+  [class*="DeleteButton"]
   {
     color: var(--btn-red-default-text);
     background-color: var(--btn-red-default-bg);
@@ -183,7 +187,8 @@
   }
 
   [class*="utton-lightRed"]:hover,
-  [class*="FileWidgetButtonRemove-button"]:hover
+  [class*="FileWidgetButtonRemove-button"]:hover,
+  [class*="DeleteButton"]:hover
   {
     color: var(--btn-red-hover-text);
     background-color: var(--btn-red-hover-bg);
@@ -192,13 +197,15 @@
   }
 
   [class*="utton-lightRed"]:focus,
-  [class*="FileWidgetButtonRemove-button"]:focus
+  [class*="FileWidgetButtonRemove-button"]:focus,
+  [class*="DeleteButton"]:focus
   {
     border-color: var(--btn-red-hover-border);
   }
 
   [class*="utton-lightRed"]:active,
-  [class*="FileWidgetButtonRemove-button"]:active
+  [class*="FileWidgetButtonRemove-button"]:active,
+  [class*="DeleteButton"]:active
   {
     color: var(--btn-red-hover-text);
     background-color: var(--btn-red-active-bg);
@@ -250,7 +257,8 @@
     border-color: var(--btn-green-hover-border);
   }
 
-  [class*="button-green"][disabled]
+  [class*="button-green"][disabled],
+  [class*="PublishButton"][disabled]
   {
     color: var(--btn-green-disabled-text);
     background-color: var(--btn-green-disabled-bg);
@@ -368,11 +376,13 @@
   [class*="EditorContainer"] > [class*="ToolbarContainer"] [class*="ToolbarSectionMeta"] {
     border-color: var(--btn-gray-default-border);
   }
-  /* main */
   /* card */
   [class*="CollectionContainer"] [class*="Container-card"],
   [class*="CollectionContainer"] [class*="ListCard-card"],
-  [class*="CollectionContainer"] [class*="GridCard-card"]
+  [class*="CollectionContainer"] [class*="GridCard-card"],
+  [class*="WorkflowContainer"] [class*="WorkflowTop-card-cardTop"],
+  [class*="WorkflowContainer"] [class*="WorkflowCardContainer-card"],
+  [class*="WorkflowContainer"] [class*="ColumnHeader"]
   {
     background-color: var(--card-bg);
     border: 1px solid var(--card-border);
@@ -394,12 +404,18 @@
   }
 
   [class*="CollectionContainer"] [class*="ListCardLink"]:hover,
-  [class*="CollectionContainer"] [class*="GridCardLink"]:hover
+  [class*="CollectionContainer"] [class*="GridCardLink"]:hover,
+  [class*="WorkflowContainer"] [class*="WorkflowCardContainer-card"]:hover
   {
     color: inherit;
     background-color: var(--card-hover-bg);
   }
 
+  [class*="CardButtonContainer"] {
+    background-color: inherit;
+  }
+
+  /* contents */
   /*sidebar*/
   [class*="SidebarHeading"] {
     color: inherit;
@@ -446,6 +462,23 @@
   }
   [class*="CollectionControlsContainer"] .css-1fh4556-ViewControlsButton-button {
     color: var(--header-button-text-active);
+  }
+  /* workflow */
+  [class*="WorkflowContainer"] [class*="ColumnHeader"] {
+    color: var(--primary-text-color);
+  }
+  .css-1njtcvy-column-WorkflowList::before, .css-1njtcvy-column-WorkflowList::after,
+  .css-lhns9r-column-columnHovered-WorkflowList::before, .css-lhns9r-column-columnHovered-WorkflowList::after
+  {
+    background-color: var(--card-border);
+    height: 100%;
+    top: 0px;
+  }
+  [class*="WorkflowLink"] [class*="CardCollection"], [class*="WorkflowLink"] [class*="CardTitle"] {
+    color: var(--primary-text-color);
+  }
+  [class*="WorkflowLink"] [class*="CardDate"], [class*="WorkflowLink"] [class*="CardBody"] {
+    color: var(--secondary-text-color);
   }
 
   /* media */
