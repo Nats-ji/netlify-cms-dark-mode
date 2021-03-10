@@ -124,7 +124,7 @@
   [class*="FileWidgetButton-button"],
   [class*="SaveButton-lightBlue"],
   [class*="StatusButton"],
-  [class*="StyledDropdownButton"]:not([class*="grayText"])
+  [class*="StyledDropdownButton"]:not([class*="grayText"]):not([class*="Publish"])
   {
     color: var(--primary-text-color);
     background-color: var(--btn-gray-default-bg);
@@ -143,7 +143,7 @@
   [class*="FileWidgetButton-button"]:hover,
   [class*="SaveButton-lightBlue"]:hover,
   [class*="StatusButton"]:hover,
-  [class*="StyledDropdownButton"]:not([class*="grayText"]):hover
+  [class*="StyledDropdownButton"]:not([class*="grayText"]):not([class*="Publish"]):hover
   {
     background-color: var(--btn-gray-hover-bg);
     border-color: var(--btn-gray-hover-border);
@@ -158,7 +158,7 @@
   [class*="FileWidgetButton-button"]:focus,
   [class*="SaveButton-lightBlue"]:focus,
   [class*="StatusButton"]:focus,
-  [class*="StyledDropdownButton"]:not([class*="grayText"]):focus
+  [class*="StyledDropdownButton"]:not([class*="grayText"]):not([class*="Publish"]):focus
   {
     color: var(--primary-text-color);
     background-color: var(--btn-gray-focus-bg);
