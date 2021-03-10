@@ -314,7 +314,15 @@
     padding: 6px 20px 6px 32px;
   }
 
-  li.css-fmy46h-SuggestionItem::after, [role="menuitem"].css-zcym63-button-dropdownItem-StyledMenuItem::after {
+  li.css-fmy46h-SuggestionItem::after {
+    content: "✓";
+    position: relative;
+    right: 0px;
+  }
+  [role="menuitem"].css-zcym63-button-dropdownItem-StyledMenuItem > span {
+    display: contents;
+  }
+  [role="menuitem"].css-zcym63-button-dropdownItem-StyledMenuItem > span:only-child::after {
     content: "✓";
     position: relative;
     right: 0px;
