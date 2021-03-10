@@ -42,11 +42,32 @@ body {
     margin: 0;
 }
 
+blockquote {
+  margin: 0;
+}
+
 body > :first-child {
     margin: 0 auto;
     max-width: 800px;
     height: 100%;
     padding: 20px;
+}
+
+[class*="WidgetPreviewContainer"]:after,[class*="WidgetPreviewContainer"]:before {
+    display: table;
+    content: ""
+}
+
+[class*="WidgetPreviewContainer"]:after {
+    clear: both
+}
+
+[class*="WidgetPreviewContainer"]>:first-child {
+    margin-top: 0!important
+}
+
+[class*="WidgetPreviewContainer"]>:last-child {
+    margin-bottom: 0!important
 }
 
 a:hover {
