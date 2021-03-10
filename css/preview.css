@@ -1,0 +1,461 @@
+:root {
+  --color-text-primary: #c9d1d9;
+  --color-text-link: #58a6ff;
+  --color-auto-gray-7: #b1bac4;
+  --color-bg-secondary: #0d1117;
+  --color-border-tertiary: #6e7681;
+  --color-text-danger: #f85149;
+  --color-border-primary: #30363d;
+  --color-text-tertiary: #8b949e;
+  --color-markdown-blockquote-border: #3b434b;
+  --color-border-secondary: #21262d;
+  --color-markdown-table-border: #3b434b;
+  --color-bg-primary: #0d1117;
+  --color-markdown-table-tr-border: #272c32;
+  --color-bg-tertiary: #161b22;
+  --color-markdown-frame-border: #3b434b;
+  --color-markdown-code-bg: rgba(240,246,252,0.15);
+  --scrollbar-thumb-color: #4c5258;
+  --scrollbar-thumb-hover-color: #30363d;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-color);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover-color);
+}
+::-webkit-scrollbar-track {
+  background-color: var(--body-bg-color);
+}
+
+body {
+    color: var(--color-text-primary);
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+    font-size: 16px;
+    line-height: 1.5;
+    word-wrap: break-word
+}
+
+a:hover {
+    text-decoration: underline;
+}
+a:active, a:hover {
+    outline-width: 0;
+}
+a {
+    color: var(--color-text-link);
+    text-decoration: none;
+}
+
+body kbd {
+    display: inline-block;
+    padding: 3px 5px;
+    font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+    line-height: 10px;
+    color: var(--color-auto-gray-7);
+    vertical-align: middle;
+    background-color: var(--color-bg-secondary);
+    border-bottom-color: var(--color-border-tertiary);
+    border: 1px solid var(--color-border-tertiary);
+    border-radius: 6px;
+    box-shadow: inset 0 -1px 0 var(--color-border-tertiary)
+}
+
+body:after,body:before {
+    display: table;
+    content: ""
+}
+
+body:after {
+    clear: both
+}
+
+body>:first-child {
+    margin-top: 0!important
+}
+
+body>:last-child {
+    margin-bottom: 0!important
+}
+
+body a:not([href]) {
+    color: inherit;
+    text-decoration: none
+}
+
+body .absent {
+    color: var(--color-text-danger)
+}
+
+body .anchor {
+    float: left;
+    padding-right: 4px;
+    margin-left: -20px;
+    line-height: 1
+}
+
+body .anchor:focus {
+    outline: none
+}
+
+body blockquote,body details,body dl,body ol,body p,body pre,body table,body ul {
+    margin-top: 0;
+    margin-bottom: 16px
+}
+
+body hr {
+    height: .25em;
+    padding: 0;
+    margin: 24px 0;
+    background-color: var(--color-border-primary);
+    border: 0
+}
+
+body blockquote {
+    padding: 0 1em;
+    color: var(--color-text-tertiary);
+    border-left: .25em solid var(--color-markdown-blockquote-border)
+}
+
+body blockquote>:first-child {
+    margin-top: 0
+}
+
+body blockquote>:last-child {
+    margin-bottom: 0
+}
+
+body h1,body h2,body h3,body h4,body h5,body h6 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25
+}
+
+body h1 .octicon-link,body h2 .octicon-link,body h3 .octicon-link,body h4 .octicon-link,body h5 .octicon-link,body h6 .octicon-link {
+    color: var(--color-text-primary);
+    vertical-align: middle;
+    visibility: hidden
+}
+
+body h1:hover .anchor,body h2:hover .anchor,body h3:hover .anchor,body h4:hover .anchor,body h5:hover .anchor,body h6:hover .anchor {
+    text-decoration: none
+}
+
+body h1:hover .anchor .octicon-link,body h2:hover .anchor .octicon-link,body h3:hover .anchor .octicon-link,body h4:hover .anchor .octicon-link,body h5:hover .anchor .octicon-link,body h6:hover .anchor .octicon-link {
+    visibility: visible
+}
+
+body h1 code,body h1 tt,body h2 code,body h2 tt,body h3 code,body h3 tt,body h4 code,body h4 tt,body h5 code,body h5 tt,body h6 code,body h6 tt {
+    font-size: inherit
+}
+
+body h1 {
+    font-size: 2em
+}
+
+body h1,body h2 {
+    padding-bottom: .3em;
+    border-bottom: 1px solid var(--color-border-secondary)
+}
+
+body h2 {
+    font-size: 1.5em
+}
+
+body h3 {
+    font-size: 1.25em
+}
+
+body h4 {
+    font-size: 1em
+}
+
+body h5 {
+    font-size: .875em
+}
+
+body h6 {
+    font-size: .85em;
+    color: var(--color-text-tertiary)
+}
+
+body ol,body ul {
+    padding-left: 2em
+}
+
+body ol.no-list,body ul.no-list {
+    padding: 0;
+    list-style-type: none
+}
+
+body ol ol,body ol ul,body ul ol,body ul ul {
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+body li {
+    word-wrap: break-all
+}
+
+body li>p {
+    margin-top: 16px
+}
+
+body li+li {
+    margin-top: .25em
+}
+
+body dl {
+    padding: 0
+}
+
+body dl dt {
+    padding: 0;
+    margin-top: 16px;
+    font-size: 1em;
+    font-style: italic;
+    font-weight: 600
+}
+
+body dl dd {
+    padding: 0 16px;
+    margin-bottom: 16px
+}
+
+body table {
+    display: block;
+    width: 100%;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    max-width: 100%;
+    overflow: auto
+}
+
+body table th {
+    font-weight: 600
+}
+
+body table td,body table th {
+    padding: 6px 13px;
+    border: 1px solid var(--color-markdown-table-border)
+}
+
+body table tr {
+    background-color: var(--color-bg-primary);
+    border-top: 1px solid var(--color-markdown-table-tr-border)
+}
+
+body table tr:nth-child(2n) {
+    background-color: var(--color-bg-tertiary)
+}
+
+body table img {
+    background-color: initial
+}
+
+body img {
+    max-width: 100%;
+    box-sizing: initial;
+    background-color: var(--color-bg-primary)
+}
+
+body img[align=right] {
+    padding-left: 20px
+}
+
+body img[align=left] {
+    padding-right: 20px
+}
+
+body .emoji {
+    max-width: none;
+    vertical-align: text-top;
+    background-color: initial
+}
+
+body span.frame {
+    display: block;
+    overflow: hidden
+}
+
+body span.frame>span {
+    display: block;
+    float: left;
+    width: auto;
+    padding: 7px;
+    margin: 13px 0 0;
+    overflow: hidden;
+    border: 1px solid var(--color-markdown-frame-border)
+}
+
+body span.frame span img {
+    display: block;
+    float: left
+}
+
+body span.frame span span {
+    display: block;
+    padding: 5px 0 0;
+    clear: both;
+    color: var(--color-text-primary)
+}
+
+body span.align-center {
+    display: block;
+    overflow: hidden;
+    clear: both
+}
+
+body span.align-center>span {
+    display: block;
+    margin: 13px auto 0;
+    overflow: hidden;
+    text-align: center
+}
+
+body span.align-center span img {
+    margin: 0 auto;
+    text-align: center
+}
+
+body span.align-right {
+    display: block;
+    overflow: hidden;
+    clear: both
+}
+
+body span.align-right>span {
+    display: block;
+    margin: 13px 0 0;
+    overflow: hidden;
+    text-align: right
+}
+
+body span.align-right span img {
+    margin: 0;
+    text-align: right
+}
+
+body span.float-left {
+    display: block;
+    float: left;
+    margin-right: 13px;
+    overflow: hidden
+}
+
+body span.float-left span {
+    margin: 13px 0 0
+}
+
+body span.float-right {
+    display: block;
+    float: right;
+    margin-left: 13px;
+    overflow: hidden
+}
+
+body span.float-right>span {
+    display: block;
+    margin: 13px auto 0;
+    overflow: hidden;
+    text-align: right
+}
+
+body code,body tt {
+    padding: .2em .4em;
+    margin: 0;
+    font-size: 85%;
+    background-color: var(--color-markdown-code-bg);
+    border-radius: 6px
+}
+
+body code br,body tt br {
+    display: none
+}
+
+body del code {
+    text-decoration: inherit
+}
+
+body pre {
+    word-wrap: normal
+}
+
+body pre>code {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    word-break: normal;
+    white-space: pre;
+    background: transparent;
+    border: 0
+}
+
+body .highlight {
+    margin-bottom: 16px
+}
+
+body .highlight pre {
+    margin-bottom: 0;
+    word-break: normal
+}
+
+body .highlight pre,body pre {
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: var(--color-bg-tertiary);
+    border-radius: 6px
+}
+
+body pre code,body pre tt {
+    display: inline;
+    max-width: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    line-height: inherit;
+    word-wrap: normal;
+    background-color: initial;
+    border: 0
+}
+
+body .csv-data td,body .csv-data th {
+    padding: 5px;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 1;
+    text-align: left;
+    white-space: nowrap
+}
+
+body .csv-data .blob-num {
+    padding: 10px 8px 9px;
+    text-align: right;
+    background: var(--color-bg-primary);
+    border: 0
+}
+
+body .csv-data tr {
+    border-top: 0
+}
+
+body .csv-data th {
+    font-weight: 600;
+    background: var(--color-bg-tertiary);
+    border-top: 0
+}
+
+body .relation {
+    border: 2px solid var(--color-border-primary);
+    border-radius: 8px;
+    padding: 20px;
+}
