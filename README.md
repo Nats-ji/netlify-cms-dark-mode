@@ -20,6 +20,22 @@ But you can also use this with the npm installation method. However, it's better
 
 ## How to use?
 
+### Method 1. Use CDN
+
+Pull `dark.css` from a public cdn, so it will keep up-to-date. `https://cdn.jsdelivr.net/gh/Nats-ji/netlify-cms-dark@master/dark.css`
+
+- Edit your Netlify CMS's HTML code:
+
+   ```html
+     </body>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Nats-ji/netlify-cms-dark@master/dark.css">
+   </html>
+   ```
+
+### Method 2. Download
+
+This method gives you more flexablity for making customizations.
+
 1. Download [dark.css](https://github.com/Nats-ji/netlify-cms-dark/blob/master/dark.css), and copy it to your site.
 
 2. Open your Netlify CMS's HTML file.
@@ -31,23 +47,23 @@ But you can also use this with the npm installation method. However, it's better
    </html>
    ```
    
-- You can check the demo HTML file [here](https://github.com/Nats-ji/netlify-cms-dark/blob/gh-pages/index.html).
-
-- If you want always dark mode instead of following the system's setting. You can remove the following code from `dark.css`:
-   ```css
-   @media (prefers-color-scheme: dark) {
-   
-   }
-   ```
+You can check the demo HTML source code [here](https://github.com/Nats-ji/netlify-cms-dark/blob/gh-pages/index.html).
    
 ## Change theme color?
 
-Just edit the css vars in `dark.css`!
-```css
-:root {
-  --body-bg-color: black;
-}
-```
+- Just edit the css vars in `dark.css`!
+   ```css
+   :root {
+     --body-bg-color: black;
+   }
+   ```
+   
+- If you want always dark mode instead of following the system's setting. You can remove the following code from `dark.css`:
+   ```css
+   @media (prefers-color-scheme: dark) {
+
+   }
+   ```
 
 ## Something is wrong?
 
