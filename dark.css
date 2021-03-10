@@ -463,7 +463,16 @@
   a[class*="RefreshPreviewButton"], a[class*="RefreshPreviewButton"] > [class*="IconWrapper"] {
     color: var(--url-text-color);
   }
-
+  /* auth page */
+  section[class*="StyledAuthenticationPage"] a[class*="GoBackButtonStyle"] {
+    color: var(--secondary-text-color);
+  }
+  section[class*="StyledAuthenticationPage"] a[class*="GoBackButtonStyle"]>p[class*="ButtonText"] {
+    color: inherit;
+  }
+  section[class*="StyledAuthenticationPage"] span[class*="PageLogoIcon"], section[class*="StyledAuthenticationPage"] a[class*="GoBackButtonStyle"]:hover {
+    color: var(--primary-text-color);
+  }
   /* contents */
   /*sidebar*/
   [class*="SidebarHeading"] {
