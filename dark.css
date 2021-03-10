@@ -266,6 +266,20 @@
     border-color: var(--btn-green-disabled-border);
     border-radius: 6px;
   }
+  /* notification */
+  [class*="toast-success"] {
+    color: var(--success-text-color);
+    background-color: var(--dropdownitem-bg);
+    box-shadow: var(--dropdownlist-shadow);
+    border-radius: 6px;
+  }
+  [class*="toast-danger"] {
+    color: var(--danger-text-color);
+    background-color: var(--dropdownitem-bg);
+    box-shadow: var(--dropdownlist-shadow);
+    border-radius: 6px;
+  }
+
   /* dropdown */
   ul[class*="dropdownList"],
   ul[class*="Suggestions"],
@@ -489,6 +503,9 @@
   }
   [class*="CollectionControlsContainer"] .css-1fh4556-ViewControlsButton-button {
     color: var(--header-button-text-active);
+  }
+  [class*="GroupHeading"] [class*="cardTopDescription"] {
+    color: var(--secondary-text-color);
   }
   /* workflow */
   [class*="WorkflowContainer"] [class*="ColumnHeader"] {
