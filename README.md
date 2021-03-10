@@ -22,13 +22,13 @@ But you can also use this with the npm installation method. However, it's better
 
 ### Method 1. Use CDN
 
-Pull `dark.css` from a public cdn, so it will keep up-to-date. `https://cdn.jsdelivr.net/gh/Nats-ji/netlify-cms-dark@master/dark.css`
+Pull `dark.css` from a public cdn, so it will keep up-to-date. `https://cdn.jsdelivr.net/gh/Nats-ji/netlify-cms-dark@master/dark.min.css`
 
 - Edit your Netlify CMS's HTML code:
 
    ```html
      </body>
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Nats-ji/netlify-cms-dark@master/dark.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Nats-ji/netlify-cms-dark@master/dark.min.css">
    </html>
    ```
 
