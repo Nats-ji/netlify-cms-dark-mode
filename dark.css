@@ -8,7 +8,7 @@
   :root {
     --body-bg-color: #0d1117;
     --primary-text-color: #c9d1d9;
-    --secondary-text-color: #969696;
+    --secondary-text-color: #8b949e;
     --success-text-color: #3fb950;
     --danger-text-color: #ff003b;
     --disabled-text-color: #484f58;
@@ -124,7 +124,7 @@
   [class*="FileWidgetButton-button"],
   [class*="SaveButton-lightBlue"],
   [class*="StatusButton"],
-  [class*="StyledDropdownButton"]
+  [class*="StyledDropdownButton"]:not([class*="grayText"])
   {
     color: var(--primary-text-color);
     background-color: var(--btn-gray-default-bg);
@@ -143,7 +143,7 @@
   [class*="FileWidgetButton-button"]:hover,
   [class*="SaveButton-lightBlue"]:hover,
   [class*="StatusButton"]:hover,
-  [class*="StyledDropdownButton"]:hover
+  [class*="StyledDropdownButton"]:not([class*="grayText"]):hover
   {
     background-color: var(--btn-gray-hover-bg);
     border-color: var(--btn-gray-hover-border);
@@ -158,7 +158,7 @@
   [class*="FileWidgetButton-button"]:focus,
   [class*="SaveButton-lightBlue"]:focus,
   [class*="StatusButton"]:focus,
-  [class*="StyledDropdownButton"]:focus
+  [class*="StyledDropdownButton"]:not([class*="grayText"]):focus
   {
     color: var(--primary-text-color);
     background-color: var(--btn-gray-focus-bg);
@@ -294,16 +294,36 @@
     background-color: var(--dropdownitem-hover-bg);
   }
 
-  li.css-fmy46h-SuggestionItem::after {
+  li[class*="SuggestionItem"] {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 20px 6px 32px;
+  }
+
+  li.css-fmy46h-SuggestionItem::after, [role="menuitem"].css-zcym63-button-dropdownItem-StyledMenuItem::after {
     content: "✓";
-    position: absolute;
-    right: 32px;
+    position: relative;
+    right: 0px;
   }
 
   div.css-8fe0f3-option::after {
     content: "✓";
     position: absolute;
     right: 22px;
+  }
+
+  [role="menuitem"] > input[type="checkbox"] {
+    display: none;
+  }
+  [role="menuitem"] > input[type="checkbox"] + span::before {
+      content: "✓";
+      color: transparent;
+      display: inline-block;
+      padding-right: 6px;
+  }
+
+  [role="menuitem"] > input[type="checkbox"]:checked + span::before {
+      color: inherit;
   }
 
   li[class*="SuggestionHeader"] {
@@ -415,20 +435,27 @@
     background-color: inherit;
   }
 
+  a[class*="AppHeaderTestRepoIndicator"], a[class*="AppHeaderSiteLink"] {
+    color: var(--secondary-text-color);
+  }
+  a[class*="RefreshPreviewButton"], a[class*="RefreshPreviewButton"] > [class*="IconWrapper"] {
+    color: var(--url-text-color);
+  }
+
   /* contents */
   /*sidebar*/
   [class*="SidebarHeading"] {
     color: inherit;
   }
-  [class*="SidebarNavLink"] {
+  [class*="SidebarNavLink"], [class*="TreeNavLink"] {
     border-left: none;
     color: var(--header-button-text);
   }
-  [class*="SidebarNavLink"]:hover {
+  [class*="SidebarNavLink"]:hover, [class*="TreeNavLink"]:hover {
     color: var(--header-button-text);
     background-color: var(--dropdownitem-hover-bg);
   }
-  [class*="SidebarNavLink"].sidebar-active {
+  [class*="SidebarNavLink"].sidebar-active, [class*="TreeNavLink"].sidebar-active {
     color: var(--header-button-text-active);
     background-color: var(--header-dropdownitem-hover-bg);
   }
@@ -477,7 +504,7 @@
   [class*="WorkflowLink"] [class*="CardCollection"], [class*="WorkflowLink"] [class*="CardTitle"] {
     color: var(--primary-text-color);
   }
-  [class*="WorkflowLink"] [class*="CardDate"], [class*="WorkflowLink"] [class*="CardBody"] {
+  [class*="WorkflowLink"] [class*="CardDate"], [class*="WorkflowLink"] [class*="CardBody"], p[class*="WorkflowTopDescription"] {
     color: var(--secondary-text-color);
   }
 
