@@ -49,4 +49,4 @@ Just edit the css vars in `dark.css`!
 
 ## Something is wrong?
 
-You are welcome to make a Pull Request to fix any bugs.
+You are welcome to make a Pull Request to fix any bugs or make any improvements.
