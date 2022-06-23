@@ -8,7 +8,7 @@ This is a simple CSS file that you can add to your Netlify CMS's HTML file.
 
 It automatically toggles your Netlify cms to dark mode if your system is also set to dark mode.
 
-You can view the demo site [here](https://nats-ji.github.io/netlify-cms-dark/).
+You can view the demo site [here](https://nats-ji.github.io/netlify-cms-dark-mode/).
 
 ![image](https://user-images.githubusercontent.com/13299626/110656997-708d1280-81fb-11eb-8c50-a9bd35596a82.png)
 
