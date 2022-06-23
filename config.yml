@@ -1,7 +1,7 @@
 backend:
   name: test-repo
 
-site_url: https://example.com
+site_url: https://github.com/Nats-ji/netlify-cms-dark-mode
 
 publish_mode: editorial_workflow
 media_folder: assets/uploads
