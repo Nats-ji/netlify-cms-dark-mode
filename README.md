@@ -28,7 +28,7 @@ Pull `dark.css` from a public cdn, so it will keep up-to-date. `https://cdn.jsde
 
    ```html
      </body>
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Nats-ji/netlify-cms-dark@master/dark.min.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Nats-ji/netlify-cms-dark-mode@master/dark.min.css">
    </html>
    ```
 
@@ -36,7 +36,7 @@ Pull `dark.css` from a public cdn, so it will keep up-to-date. `https://cdn.jsde
 
 This method gives you more flexablity for making customizations.
 
-1. Download [dark.css](https://github.com/Nats-ji/netlify-cms-dark/blob/master/dark.css), and copy it to your site.
+1. Download [dark.css](https://github.com/Nats-ji/netlify-cms-dark-mode/blob/master/dark.css), and copy it to your site.
 
 2. Open your Netlify CMS's HTML file.
 
@@ -47,7 +47,7 @@ This method gives you more flexablity for making customizations.
    </html>
    ```
    
-You can check the demo HTML source code [here](https://github.com/Nats-ji/netlify-cms-dark/blob/gh-pages/index.html).
+You can check the demo HTML source code [here](https://github.com/Nats-ji/netlify-cms-dark-mode/blob/gh-pages/index.html).
    
 ## Change theme color?
 
